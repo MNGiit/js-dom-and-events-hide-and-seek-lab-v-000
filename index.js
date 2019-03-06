@@ -20,7 +20,7 @@ function increaseRankBy(n) {
 }
 
 function deepestChild() {
-  let pull = document.querySelector("#grand-node").lastChild;
+  let pull = document.getElementById("grand-node").innerText;
  
   return pull;
 }
