@@ -24,11 +24,24 @@ function deepestChild() {
   return pull;
 }
 
+// function increaseRankBy(n) {
+//   let ranked = document.querySelectorAll(".ranked-list");
+//   let newRanked = ranked;
+//   for (let i = 0; i <= ranked.length; i++) {
+//     ranked.children[i].innerHTML = parseInt(ranked[i].innerHTML) + n;
+//   }
+// }
+
 function increaseRankBy(n) {
-  let ranked = document.querySelectorAll(".ranked-list");
-  let newRanked = ranked;
-  for (let i = 0; i <= ranked.length; i++) {
-    ranked.children[i].innerHTML = parseInt(ranked[i].innerHTML) + n;
+  const rankedLists = document.querySelectorAll('.ranked-list');
+
+  for (let i = 0, l = rankedLists.length; i < l; i++) {
+    let children = rankedLists[i].children;
+
+    for (let j = 0, k = children.length; j < k; j++) {
+      children[j].innerHTML = parseInt(children[j].innerHTML) + n;
+    }
   }
+  
 }
 
