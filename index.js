@@ -33,15 +33,15 @@ function deepestChild() {
 // }
 
 function increaseRankBy(n) {
-  const rankedLists = document.querySelectorAll('.ranked-list');
+  const ranked = document.querySelectorAll('.ranked-list');
 
-  for (let i = 0, l = rankedLists.length; i < l; i++) {
-    let children = rankedLists[i].children;
+  // two for loops
+  for (let i = 0; i < ranked.length; i++) {
+    let workOnThis = ranked[i].children;
 
-    for (let j = 0, k = children.length; j < k; j++) {
-      children[j].innerHTML = parseInt(children[j].innerHTML) + n;
+    for (let iTwo = 0; iTwo < workOnThis.length; iTwo++) {
+      workOnThis[iTwo].innerHTML = parseInt(workOnThis[iTwo].innerHTML) + n;
     }
   }
-  
 }
 
