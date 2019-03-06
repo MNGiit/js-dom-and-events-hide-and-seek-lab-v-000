@@ -23,7 +23,7 @@ function deepestChild() {
   let pull = document.getElementById("grand-node").innerHTML;
   
   while (pull.childElementCount > 0) {
-    pull = pull[1];
+    pull = pull.children[0];
   }
   
   return pull;
