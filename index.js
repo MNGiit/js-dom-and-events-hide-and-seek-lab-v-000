@@ -13,8 +13,8 @@ function nestedTarget() {
 }
 
 function increaseRankBy(n) {
-  const rankedLength = document.querySelector(".ranked-list");
-  for (let i = 0; i <= rankedLengthlength; i++) {
-    ranks[i].innerHTML = parseInt(ranks[i].innerHTML) + n
+  let ranked = document.querySelector(".ranked-list");
+  for (let i = 0; i <= ranked.length; i++) {
+    ranked[i].innerHTML = parseInt(ranked[i].innerHTML) + n;
   }
 }
