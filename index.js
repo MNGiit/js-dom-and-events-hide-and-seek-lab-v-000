@@ -6,6 +6,7 @@ function getFirstSelector(selector) {
 
 
 // pulls a .target out of #nested
+// # is used for IDs in selectors
 function nestedTarget() {
   return document.querySelector("#nested .target");
 }
